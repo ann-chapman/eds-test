@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <header></header>
+  <main>
+    <div>
+      <!-- Color Hero Block -->
+      <div class="color-hero">
+        <div></div>
+        <div><p>{{colorFamily}} Color Family</p></div>
+      </div>
+    </div>
+    <div>
+      <!-- Color Summary Block -->
+      <div class="color-summary">
+        <div><h2>{{colorDescription}}</h2></div>
+        <div><p>/fragments/why-behr-paint</p></div>
+      </div>
+    </div>
+    <div>
+      <!-- Room Visualization Block -->
+      <div class="room-visualization">
+        <div><img src="https://www.behr.com/renderimage/render?roomId=1007&surfaceId1=1&color1={{colorCode}}&surfaceId2=&color2=&surfaceId3=&color3=&surfaceId4=&color4=&surfaceId5=&color5=&surfaceId6=&color6=&surfaceId7=&color7=&surfaceId8=&color8=&surfaceId9=&color9=&surfaceId10=&color10=" alt="{{colorName}} room visualization"></div>
+      </div>
+    </div>
+    <div>
+      <!-- Similar Colors Block (client-side) -->
+      <div class="similar-colors"><div>{{colorCode}}</div></div>
+    </div>
+    <div>
+      <!-- Color Palettes Block (client-side) -->
+      <div class="color-palettes"><div>{{colorCode}}</div></div>
+    </div>
+    <div>
+      <!-- Fragment Block (AEM marketing content) -->
+      <div class="fragment"><div>/fragments/color-detail-promo</div></div>
+    </div>
+    <div>
+      <!-- Metadata Block -->
+      <div class="metadata">
+        <div><div><p>color-code</p></div><div><p>{{colorCode}}</p></div></div>
+        <div><div><p>color-name</p></div><div><p>{{colorName}}</p></div></div>
+        <div><div><p>color-hex</p></div><div><p>{{rgbHex}}</p></div></div>
+        <div><div><p>color-family</p></div><div><p>{{colorFamily}}</p></div></div>
+        <div><div><p>lrv</p></div><div><p>{{lrv}}</p></div></div>
+        <div><div><p>color-r</p></div><div><p>{{r}}</p></div></div>
+        <div><div><p>color-g</p></div><div><p>{{g}}</p></div></div>
+        <div><div><p>color-b</p></div><div><p>{{b}}</p></div></div>
+        <div><div><p>archived</p></div><div><p>{{archived}}</p></div></div>
+        <div><div><p>title</p></div><div><p>{{colorName}} - {{colorCode}} | Behr Paint</p></div></div>
+        <div><div><p>description</p></div><div><p>{{colorDescription}}</p></div></div>
+        <div><div><p>template</p></div><div><p>color-detail</p></div></div>
+        <div><div><p>tags</p></div><div><p>{{colorFamily}}, paint, color</p></div></div>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+</html>
