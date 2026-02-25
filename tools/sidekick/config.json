@@ -1,0 +1,68 @@
+{
+  "editUrlLabel": "Document Authoring",
+  "editUrlPattern": "https://da.live/edit#/ann-chapman/eds-test{{pathname}}",
+  "plugins": [
+      {
+        "id": "color-metadata",
+        "title": "Color Metadata Assistant",
+        "environments": [
+          "edit"
+        ],
+        "daLibrary": true,
+        "includePaths": [
+          "DA"
+        ],
+        "experience": "dialog",
+        "path": "/tools/color-metadata/color-metadata.html"
+      },
+      {
+        "id": "fragments",
+        "title": "Fragments",
+        "environments": [
+          "edit"
+        ],
+        "daLibrary": true,
+        "includePaths": [
+          "DA"
+        ],
+        "experience": "dialog",
+        "icon": "https://main--eds-test--ann-chapman.aem.page/icons/icon-fragment.png",
+        "path": "/tools/fragments/fragments.html"
+      },
+      {
+        "id": "da-tags",
+        "title": "Tag Browser",
+        "environments": [
+          "edit"
+        ],
+        "daLibrary": true,
+        "icon": "https://main--eds-test--ann-chapman/tools/tags/classification.svg",
+        "path": "/tools/tags/tags.html"
+      },
+      {
+        "id": "aem-experimentation",
+        "titleI18n": {
+          "en": "Experimentation"
+        },
+        "environments": [
+          "dev",
+          "preview"
+        ],
+        "event": "experimentation"
+      },
+      {
+        "id": "generate-variations",
+        "title": "Generate Variations",
+        "url": "https://experience.adobe.com/aem/generate-variations",
+        "passConfig": true,
+        "environments": [
+          "preview",
+          "live",
+          "edit"
+        ],
+        "includePaths": [
+          "**.docx**"
+        ]
+      }
+    ]
+}

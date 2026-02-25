@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Color Metadata Assistant</title>
+  <link rel="stylesheet" href="color-metadata.css">
+</head>
+<body>
+  <div class="color-metadata-wrapper">
+    <h1 class="tool-title">Color Metadata Assistant</h1>
+
+    <div class="status-container">
+      <div class="loading-state hidden">Fetching color data...</div>
+
+      <div class="message-wrapper hidden">
+        <p class="feedback-message"></p>
+      </div>
+
+      <div class="color-preview hidden">
+        <div class="color-swatch" aria-hidden="true"></div>
+        <div class="color-info">
+          <h2 class="color-name"></h2>
+          <p class="color-detail color-code-display"></p>
+          <p class="color-detail color-hex-display"></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="actions-container">
+      <button
+        class="action-btn hidden"
+        type="button"
+        id="insert-btn"
+        aria-label="Insert color metadata block at cursor position"
+      >
+        Insert Metadata Block
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="color-metadata.js"></script>
+</body>
+</html>

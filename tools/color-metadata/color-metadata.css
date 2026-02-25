@@ -1,0 +1,197 @@
+:root {
+  /* Colors */
+  --color-primary: #2020E0;
+  --color-border: #ccc;
+  --color-error: #800000;
+  --color-text: rgb(0 0 0);
+  --color-text-secondary: #666;
+  --color-success: #1a6e1a;
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 16px;
+  --spacing-xl: 20px;
+  --spacing-button: 5px 14px;
+
+  /* Typography */
+  --font-family: 'Adobe Clean', adobe-clean, 'Trebuchet MS', sans-serif;
+  --font-size-base: 14px;
+  --font-size-lg: 18px;
+  --font-size-sm: 12px;
+  --font-weight-bold: 700;
+
+  /* Border */
+  --border-radius-sm: 4px;
+  --border-radius-lg: 8px;
+  --border-radius-xl: 16px;
+  --border-width: 1px;
+  --border-width-thick: 2px;
+
+  /* Swatch */
+  --swatch-size: 56px;
+}
+
+/* Wrapper */
+.color-metadata-wrapper {
+  padding: var(--spacing-xl);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+}
+
+/* Tool title */
+.tool-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--spacing-lg);
+  color: var(--color-text);
+  border-bottom: var(--border-width) solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
+}
+
+/* Status container */
+.status-container {
+  min-height: 80px;
+  margin-bottom: var(--spacing-lg);
+}
+
+/* Loading state */
+.loading-state {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  color: var(--color-text-secondary);
+  font-style: italic;
+  background: #f5f5f5;
+  border-radius: var(--border-radius-sm);
+}
+
+.loading-state::after {
+  content: '';
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--color-text-secondary);
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Message */
+.message-wrapper {
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  background: #f0f0f0;
+}
+
+.message-wrapper.hidden {
+  display: none;
+}
+
+.feedback-message {
+  margin: 0;
+  line-height: 1.4;
+  color: var(--color-success);
+}
+
+.feedback-message.error {
+  color: var(--color-error);
+}
+
+/* Color preview card */
+.color-preview {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-md);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  background: #fafafa;
+}
+
+.color-preview.hidden {
+  display: none;
+}
+
+.color-swatch {
+  width: var(--swatch-size);
+  height: var(--swatch-size);
+  border-radius: var(--border-radius-sm);
+  border: var(--border-width) solid var(--color-border);
+  flex-shrink: 0;
+  background-color: #ccc;
+}
+
+.color-info {
+  overflow: hidden;
+}
+
+.color-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--spacing-xs);
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.color-detail {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+/* Actions */
+.actions-container {
+  border-top: var(--border-width-thick) solid var(--color-border);
+  padding-top: var(--spacing-lg);
+}
+
+/* Buttons */
+.action-btn {
+  display: inline-block;
+  padding: var(--spacing-button);
+  line-height: 18px;
+  font-size: var(--font-size-base);
+  font-family: var(--font-family);
+  font-weight: var(--font-weight-bold);
+  border: var(--border-width-thick) solid var(--color-text);
+  color: var(--color-text);
+  border-radius: var(--border-radius-xl);
+  background: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.action-btn:hover {
+  background-color: var(--color-text);
+  color: #fff;
+}
+
+.action-btn:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.action-btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.action-btn.hidden {
+  display: none;
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
